@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<head>
+  <title>暗記アプリ ホーム</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    body {
+      text-align: center;
+      padding-top: 50px;
+      font-family: sans-serif;
+    }
+    .subject-btn {
+      display: block;
+      width: 200px;
+      margin: 20px auto;
+      padding: 15px;
+      font-size: 18px;
+      border-radius: 12px;
+      border: none;
+      background-color: #4CAF50;
+      color: white;
+      cursor: pointer;
+      transition: background-color 0.2s;
+    }
+    .subject-btn:hover {
+      background-color: #45a049;
+    }
+  </style>
+</head>
+<body>
+  <h1>暗記アプリ</h1>
+  <p>科目を選んでください</p>
+
+  <button class="subject-btn" onclick="goTo('english')">英語</button>
+  <button class="subject-btn" onclick="goTo('history')">歴史</button>
+  <button class="subject-btn" onclick="goTo('science')">理科</button>
+
+  <script>
+    function goTo(subject) {
+      // home.html に科目名をクエリパラメータとして渡す
+      window.location.href = `home.html?subject=${subject}`;
+    }
+  </script>
+</body>
+</html>

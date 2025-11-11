@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>暗記カード</title>
+  <link href="style.css" rel="stylesheet"/>
+</head>
+
+<body>
+    <h1>暗記カード</h1>
+    <div class="container"></div>
+    <select id="subject-select">
+      <option value="english">英語</option>
+      <option value="history">歴史</option>
+      <option value="science">生物</option>
+    </select>
+
+    <div id="card" class="card">
+      <div id="word">タップで単語を表示</div>
+      <div id="answer" class="hidden"></div>
+      <div id="comment" class="hidden"></div>
+    </div>
+
+    <div class="buttons">
+      <button id="show-answer">答えを見る</button>
+      <button id="next-word">次へ</button>
+      <button onclick="goHome()">ホームに戻る</button>
+    </div>
+  </div>
+
+  <script src="main.js"></script>
+  <script>
+    function goHome() {
+      window.location.href = "first.html";
+    }
+  </script>
+</body>
+</html>
